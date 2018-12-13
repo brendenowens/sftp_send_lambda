@@ -15,10 +15,14 @@ In order to get this process working you will need to get a few things in order 
 ### About the Config file
 In this repo you get the skeleton of the config file that this lambda script uses. I will explain what the individual fields are and their purpose in the script. These should be in JSON format with key value pairs. 
 
-**secret_name** is the name of the AWS Secrets Manager secret that this script should pull the SSH keys from so that it can authenticate with the server and send your files
+**secret_name** is the name of the AWS Secrets Manager secret that this script should pull the SSH keys from so that it can authenticate with the server and send your files.
+
 **hostname** is the name or IP of the server that you will be sending your file to. For example if I am sending a file to *google.com*, then I would put *google.com* as the **hostname** in the config.
+
 **username** is the username that the script should use when it tries to authenticate with the server. So if my username on *google.com* was *evee* then I would put *evee* as the username in the config.
+
 **topic** is the ARN, Amazon Resource Number, of the SNS topic that you will be sending notifications to.
+
 **destination** is the path on the destination server that the file should be sent to. For example */final/destination/* would be what you would put as the value. *Note: You should end your path with a / otherwise you might put the file in the wrong directory.*
 
 ### About the SSH Key in AWS Secrets Manager
