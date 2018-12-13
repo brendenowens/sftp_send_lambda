@@ -10,7 +10,7 @@ require 'net/sftp'
    Modified on: 12/13/2018
 
    Description: This is a lambda function script for sending files out of S3 using SFTP. 
-                This script was to help make up for AWS Transfer for SFTP didn't do. 
+                This script was to help make up for what AWS Transfer for SFTP didn't do. 
                 The setup needed is: 
                     1. create a deployment package for a ruby lambda function.
                     2. upload the package to lambda
